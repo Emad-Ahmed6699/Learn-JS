@@ -6,6 +6,13 @@
     <title>Fundamentals of JavaScript</title>
 </head>
 <body>
-    
+    <!--we can write the JavaScript code directly in the HTML file(red coloring doesn't appear)-->
+    <script>
+        document.querySelector('h1').style.color = 'red';
+    </script>
+    <!--we can also link to an external JavaScript file-->
+    <h1>Welcome to JavaScript Fundamentals</h1>
+    <p>This page introduces the basics of JavaScript programming.</p>
+    <script src="main.js"></script> <!--the red coloring will work coz the script is loaded after the HTML elements are created -->
 </body>
 </html>
