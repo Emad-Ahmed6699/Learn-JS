@@ -27,3 +27,33 @@ window.document.title = 'New Title';//window object's is used to access and modi
 
 //the browser know i am using it so we can omit the window object and just use document.title = 'New Title';
 //or print() instead of window.print() or alert() instead of window.alert() etc.
+
+
+//data types in js
+//primitive data types: string, number, boolean, null, undefined, symbol, bigint
+//non-primitive data types: object (arrays, functions, objects)
+//dynamic typing: variables can hold values of any data type and can change types at runtime
+let exampleString = "Hello, World!"; // string
+let exampleNumber = 42; // number
+document.writeln(typeof exampleString); // Output: string
+document.writeln(typeof true); // Output: boolean
+document.writeln(typeof undefined); // Output: undefined
+document.writeln(typeof null); // Output: object (this is a known quirk in JavaScript)
+
+// variables in js
+//var, let, const
+var globalVar = "I am a global variable"; // function-scoped or globally-scoped and can be redeclared and reassigned
+// var globalVar = "I can be redeclared"; // redeclaration is allowed with var
+
+let blockVar = "I am a block-scoped variable"; // block-scoped and can be reassigned but not redeclared
+// let blockVar = "I cannot be redeclared"; // redeclaration is not allowed with let
+blockVar = "I can be reassigned"; // reassignment is allowed with let ((error will occur if we try to redeclare it))
+//coz that we use always let instead of var
+
+const constantVar = "I am a constant variable"; // block-scoped and cannot be reassigned or redeclared
+
+//concatination
+let firstName = "John";
+let lastName =25 ;
+console.log("My name is " + firstName + " and I am " + lastName + " years old."); // Using + operator
+console.log(`My name is ${firstName} and I am ${lastName} years old.`); // Using template literals`` under ESC key
