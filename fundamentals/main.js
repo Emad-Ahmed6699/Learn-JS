@@ -106,3 +106,17 @@ console.log(Math.random() * 100); // Output: random number between 0 and 100
 //simple application 
 let num = window.prompt("Enter a number to check if it's even or odd:");
 console.log(`You entered: ${num}`);
+if (Number(num) % 2 === 0) {
+    console.log(`${num} is an even number.`);
+} else {
+    console.log(`${num} is an odd number.`);
+}
+
+console.log(typeof num); // Output: string
+//the prompt() method always returns a string, so we need to convert it to a number using Number() function before performing arithmetic operations
+
+console.log(typeof String(123)); // Output: string
+let fffs = 12345;
+console.log(typeof fffs.toString()); // Output: string
+console.log(typeof (100).toString()); // Output: string using () or ..
+console.log(typeof 123..toString()); // Output: string
