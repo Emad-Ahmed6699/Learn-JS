@@ -57,3 +57,52 @@ let firstName = "John";
 let lastName =25 ;
 console.log("My name is " + firstName + " and I am " + lastName + " years old."); // Using + operator
 console.log(`My name is ${firstName} and I am ${lastName} years old.`); // Using template literals`` under ESC key
+
+console.log('5 + 10'); // Output: 15 (number)
+console.log('5' + 10); // Output: 510 (string concatenation)
+console.log('4' + '10'); // Output: 410 (string concatenation)
+console.log('5' - 2); // Output: 3 (number) JS automatically converts string to number for subtraction
+console.log('10' * 2); // Output: 20 (number)
+console.log('10' / 2); // Output: 5 (number)
+console.log('10' ** '2'); // Output: 100 (number)
+
+console.log(typeof NaN); // Output: number (Not-a-Number is of type number)
+console.log(NaN === NaN); // Output: false (NaN is not equal to anything, including itself)
+console.log(NaN == NaN); // === vs == both are false for NaN
+console.log(+null); // Output: 0 (unary plus converts null to 0)
+console.log(+undefined); // Output: NaN (unary plus converts undefined to NaN)
+console.log('abc' - 2); // Output: NaN (invalid arithmetic operation results in NaN)
+
+console.log(+'5' + +'4'); // Output: 9 (unary plus converts string to number)
+console.log(Number('5') + Number('4')); // Output: 9 (using Number() function to convert string to number)
+
+console.log(typeof NaN); // Output: number (Not-a-Number is of type number)
+
+console.log(parseInt('10abc')); // Output: 10 (parses integer from the beginning of the string)
+console.log(parseInt('10.5abc')); // Output: 10 (parses integer, ignores decimal part)
+console.log(parseInt('ab 10.5 abc')); // Output: NaN (no valid integer at the start)
+//parseint better than number() coz it can extract numbers from strings 
+
+console.log(Number.MAX_VALUE); // Output: 1.7976931348623157e+308 (largest representable number)
+console.log(Number.MAX_SAFE_INTEGER); // Output: 9007199254740991 (largest safe integer)
+console.log(Number.isSafeInteger(9007199254740991)); // Output: true
+console.log(Number.isSafeInteger(9007199254740992)); // Output: false (exceeds safe integer limit)
+
+console.log(Number.isInteger(10)); // Output: true
+console.log(Number.isInteger(10.5)); // Output: false
+
+console.log(Number.isNaN(NaN)); // Output: true
+console.log(Number.isNaN('abc')); // Output: false (string is not NaN)
+
+//math class in js
+console.log(Math.PI); // Output: 3.141592653589793
+console.log(Math.round(4.7)); // Output: 5
+console.log(Math.floor(4.7)); // Output: 4
+console.log(Math.ceil(4.2)); // Output: 5
+console.log(Math.random()); // Output: random number between 0 and 1
+console.log(Math.max(10, 20, 5, 15)); // Output: 20
+console.log(Math.random() * 100); // Output: random number between 0 and 100
+
+//simple application 
+let num = window.prompt("Enter a number to check if it's even or odd:");
+console.log(`You entered: ${num}`);
