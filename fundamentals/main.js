@@ -120,3 +120,55 @@ let fffs = 12345;
 console.log(typeof fffs.toString()); // Output: string
 console.log(typeof (100).toString()); // Output: string using () or ..
 console.log(typeof 123..toString()); // Output: string
+
+// strings in js
+let sampleString = "  Hello, JavaScript!  ";
+console.log(sampleString.length); // Output: 21
+console.log(sampleString.trim()); // Output: "Hello, JavaScript!"
+console.log(sampleString.toUpperCase()); // Output: "  HELLO, JAVASCRIPT!  "
+console.log(sampleString.toLowerCase()); // Output: "  hello, javascript!  "
+console.log(sampleString.indexOf("JavaScript")); // Output: 8
+console.log(sampleString.slice(2, 7)); // Output: "Hello"
+console.log(sampleString.replace("JavaScript", "JS")); // Output: "  Hello, JS!  "
+console.log(sampleString.split(", ")); // Output: [ "  Hello", "JavaScript!  " ]
+console.log(sampleString.charAt(4)); // Output: "o"
+console.log(sampleString.includes("Java")); // Output: true
+console.log(sampleString.startsWith("  He")); // Output: true
+console.log(sampleString.endsWith("!  ")); // Output: true
+console.log(sampleString.repeat(3)); // Output: "  Hello, JavaScript!    Hello, JavaScript!    Hello, JavaScript!  "
+//string methods are used to manipulate and retrieve information from strings
+
+
+//arrays in js
+let sampleArray = [10, 20, 30, 40, 50];
+console.log(sampleArray.length); // Output: 5
+console.log(sampleArray.push(60)); // Output: 6 (new length after adding element)
+console.log(sampleArray); // Output: [10, 20, 30, 40, 50, 60]
+console.log(sampleArray.pop()); // Output: 60 (removed element)
+console.log(sampleArray); // Output: [10, 20, 30, 40, 50]
+console.log(sampleArray.shift()); // Output: 10 (removed first element)
+console.log(sampleArray); // Output: [20, 30, 40, 50]
+console.log(sampleArray.unshift(5)); // Output: 5 (new length after adding element at start)
+console.log(sampleArray); // Output: [5, 20, 30, 40, 50]
+
+console.log(sampleArray.indexOf(30)); // Output: 2
+console.log(sampleArray.slice(1, 4)); // Output: [20, 30, 40] (sliced array from index 1 to 3)
+console.log(sampleArray.join(", ")); // Output: "5, 20, 30, 40, 50"
+
+let shortArray = [1, 2, 3,4,5,6,7,8,9];
+console.log(shortArray.splice(2, 2,11)); // Output: [3, 4] (removed elements) /* splice(index, deleteCount, item we need to add) */
+console.log(shortArray); // Output: [1, 2, 11, 5, 6, 7, 8, 9]
+
+console.log(shortArray.reverse()); // Output: [9, 8, 7, 6, 5, 11, 2, 1]
+let longArray = [7, 2, 1, 6, 44, 8, 9, ]; // Sorting in ascending order
+console.log(longArray.sort()); // Output: [1, 2, 6, 7, 8, 9, 44]
+
+
+let numbersArray = [1, 2, 3, 4, 5];
+let number2Array = [10, 20, 30, 40, 50];
+let combinedArray = numbersArray.concat(number2Array);
+console.log(combinedArray); // Output: [1, 2, 3, 4, 5, 10, 20, 30, 40, 50] <----
+numbersArray += number2Array; //this will convert both arrays to strings and concatenate them
+console.log(numbersArray); // Output: "1,2,3,4,510,20,30,40,50" <---
+
+//array methods are used to manipulate and retrieve information from arrays
