@@ -185,3 +185,65 @@ let employee = new Object({
 delete car.model;
 console.log("Car model after deletion: " + car.model); // undefined
 
+
+// |
+// |
+// |
+//\./
+//this keyword
+let laptop =this;
+console.log(laptop);// refers to global object (window in browsers) when used in global scope
+//--------------------------------\\
+//js make many mistakes
+x = 10; // implicit global variable (not recommended)
+console.log(window.x); // 10 (in browsers, x becomes a property of the global window object)
+//to avoid this use strict mode
+"use strict";
+y = 20; // ReferenceError: y is not defined <<error>>
+//--------------------------------\\
+
+function showThis() {
+    console.log(this); // refers to the object that called the function (in this case, the global object)
+}
+
+//if i use restrict mode then this will be undefined in function
+"use strict";
+function showThisStrict() {
+    console.log(this); // undefined in strict mode 
+}
+
+//object created using object literal
+let phone = {
+    brand: "Apple",
+    model: "iPhone 13"
+};
+let tablet = Object.create(phone);// tablet inherits from phone
+console.log(tablet.brand); // Accessing inherited property (Apple)
+
+
+//adding or modifying property in tablet object does not affect phone object
+let phablet = Object.create(phone, {
+    model: { value: "iPad Pro" }, // overriding model property (modifying)
+    size: { value: "12.9 inches" } // adding new property
+});
+console.log(phablet.model); // iPad Pro
+console.log(phablet.brand); // Apple (inherited property)
+
+//or add and modify properties after creation (another way)
+phablet.model = "iPad Air"; // modifying model property
+phablet.color = "Silver"; // adding new property
+console.log(phablet.model); // iPad Air
+console.log(phablet.color); // Silver
+
+//combining objects
+let obj1 = { a: 1, b: 2 };
+let obj2 = { b: 3, c: 4 };
+let combined = Object.assign({}, obj1, obj2); // --> {} this is an empty target object so we can create a new object like{ f:5} instead of {}
+console.log(combined); // { a: 1, b: 3, c: 4 } (obj2 properties overwrite obj1 properties)
+
+
+//assignment via reference
+let original = { value: 42 };
+let reference = original;
+reference.value = 100;
+console.log(original.value); // 100 (original object is affected because both variables reference the same object)
