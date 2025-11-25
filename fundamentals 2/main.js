@@ -114,7 +114,7 @@ function sum(        ...nums         ) { // rest parameter(passes multiple argum
 sum(1, 2, 3, 4); // [1, 2, 3, 4]
 
 //arrow functions
-const square = (n) => n * n; //remove return and curly braces for single expression and function 
+const square = (n) => n * n; //remove return and curly braces for single expression and function keyword
 console.log("Square of 5: " + square(5)); // 25
 //if more than one statement is there then we need to use curly braces and return keyword
 
@@ -122,3 +122,66 @@ console.log("Square of 5: " + square(5)); // 25
 const cube = n => n*n*n; //no need of parentheses for single parameter
 //no parameter
 const greetUser = _ => console.log("Hello User!");//underscore is used when there is no parameter
+
+
+
+//----------------------------------------------------------------------------------------\\
+
+//objects
+let person = {};
+console.log(typeof person);// output : object
+
+//properties and methods
+
+let car = {
+    brand: "Toyota",
+    model: "Camry",
+    colors : ["Red", "Blue", "Green"],
+    
+    numbers :{                // nested object
+        vin: "1234567890",
+        plate: "XYZ 1234"
+    },
+
+    start: function() {
+        console.log("Car started");
+    }
+
+    ,functionWithArrow: () => {
+        console.log(car.colors[3]);//accessing property inside arrow function must use object name
+    }
+
+};
+console.log("Car brand: " + car.brand); // Accessing property
+car.start(); // Calling method
+
+//accessing nested object property
+console.log("Car VIN: " + car.numbers.vin);
+//or using []
+console.log("Car VIN: " + car["numbers"]["vin"]);
+
+//adding new property without declaration inside object
+let bike = {};
+bike.brand = "Yamaha";
+bike.model = "R15";
+console.log("Bike brand: " + bike.brand);
+//adding new method without declaration inside object
+bike.start = function() {
+    console.log("Bike started");
+};
+
+//using new keyword
+let student = new Object();
+student.name = "John";
+student.age = 20;
+//or 
+let employee = new Object({
+    name: "Jane",
+    age: 25
+});
+//important note: new keyword creates an instance of Object but object literal {} is preferred way to create objects
+
+//deleting property
+delete car.model;
+console.log("Car model after deletion: " + car.model); // undefined
+
