@@ -100,3 +100,25 @@ function x() {
 //output is 0
 //because of hoisting both y functions are hoisted but the second y function overwrites the first one
 //so when y() is called it refers to the second y function which returns 0
+
+//default parameters
+function greet(name = "Guest") {
+    console.log("Hello, " + name + "!");
+}
+greet(); // Hello, Guest!
+greet("Alice"); // Hello, Alice!
+
+function sum(        ...nums         ) { // rest parameter(passes multiple arguments as an array)
+    console.log(nums);// array of numbers
+}
+sum(1, 2, 3, 4); // [1, 2, 3, 4]
+
+//arrow functions
+const square = (n) => n * n; //remove return and curly braces for single expression and function 
+console.log("Square of 5: " + square(5)); // 25
+//if more than one statement is there then we need to use curly braces and return keyword
+
+//one parameter
+const cube = n => n*n*n; //no need of parentheses for single parameter
+//no parameter
+const greetUser = _ => console.log("Hello User!");//underscore is used when there is no parameter
