@@ -92,3 +92,19 @@ container.innerText ='<p>hello</p>';
 console.log(container); //<div id="container"> <p>hello</p> </div> as text
 container.textContent ='<p>hello</p>';//like inner text 
 
+//----------------------------------------------------------------------------------\\
+//sibling and parent
+let head = document.getElementById('second');
+console.log(head.nextElementSibling);//get the next sibling
+console.log(head.previousElementSibling);//get the previous sibling
+//so we can access it , then we can manipulate it like 
+head.nextElementSibling.style.color = 'red';
+
+//previous element sibling vs pervious sibling
+console.log(head.previouSibling);//get the previous sibling even if it is not an element (comments or word without element)
+
+console.log(head.parentElement);//get the parent element (the element that contains this element) => div in this case
+
+
+//----------------------------------------------------------------------------------\\
+
