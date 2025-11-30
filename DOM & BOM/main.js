@@ -38,3 +38,44 @@ z.style.fontWeight='bold';//accessing any element using queryselector
 //5-querySelectorAll ((select all element))
 let a =document.querySelectorAll('.para'); //that returns an array so we can access the first match using ([0]after the () )
 document.querySelectorAll('.para')[2].style.color='green';
+//----------------------------------------------------------------------------------\\
+
+//accessing the body
+console.log(document.body);
+//accessing the title
+console.log(document.title);
+//changing the title
+document.title="New Title";
+//accessing the images
+console.log(document.images);
+console.log(document.images[0]);//accessing the first image
+console.log(document.images[1].src);//accessing the src of the second images
+//accessing the links
+console.log(document.links);
+console.log(document.links[0]);//accessing the href of the first link
+console.log(document.links[1].href);//accessing the href of the second link
+document.links[1].style.color='red';//changing the color of the second link
+document.links[0].href="https://www.google.com";//changing the href of the first link
+//accessing the forms
+console.log(document.forms);//HTMLCollection[]
+console.log(document.forms[0]);//accessing the first form
+//----------------------------------------------------------------------------------\\
+//attributes(get ,set,remove)
+let img2 = document.getElementById('img2');
+//get attribute
+console.log(img2.src);//getting the src attribute of the image
+console.log(img2.alt);//getting the alt attribute of the image
+console.log(img2.getAttribute('src'));//getting the src attribute of the image
+//set attribute
+img2.alt="This is a new alt text";//setting a new alt attribute
+img2.setAttribute('title','This is a title attribute');//setting a new title attribute
+img2.title="This is another title attribute";//setting a new title attribute
+//remove attribute
+img2.removeAttribute('title');//removing the title attribute
+// if this element has attributes
+console.log(img2.hasAttributes());
+console.log(img2.hasAttribute('alt'));
+console.log(img2.hasAttribute('title'));
+//display all attributes
+console.log(img2.attributes);
+console.log(img2.attributes[0]);
