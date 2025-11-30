@@ -108,3 +108,64 @@ console.log(head.parentElement);//get the parent element (the element that conta
 
 //----------------------------------------------------------------------------------\\
 
+//css style
+let value = document.getElementById('cssstyle');
+value.innerText ='hello world';
+//1- element.style.peroperty = value;
+value.style.backgroundColor = 'lightblue';
+value.style.borderLeft = '30px solid #2ab590ff';
+//2- element.style.cssText =  '  ';
+value.style.cssText = 'font-size: 30px; color: red; background-color: lightblue; border-left: 30px solid #acbb26ff;';
+// ----> the csstext remove all the styles and add the new styles 
+//3-element.setperoperty(''); or element.removeperoperty(''); 
+value.style.removeProperty('color');
+value.style.setProperty('color', 'orange');
+// ----> the setproperty remove the property and add the new property
+
+//----------------------------------------------------------------------------------\\
+
+//create elements by javascript
+let newElement = document.createElement('p');//create a new element (انشاء عنصر جديد) (1)
+newElement.innerText = 'This is a new paragraph.';//add text to the new element (اضافة نص للعنصر الجديد) (2)
+let content = document.createTextNode('This is a new text node.'); //create a new text node (انشاء عنصر نصي جديد)(2)
+//the two ways correct of adding content to an element
+document.body.appendChild(newElement);//add the new element to the body
+newElement.appendChild(content);//add the new text node to the body
+
+//----------------------------------------------------------------------------------\\
+//card example
+let nelement = document.createElement('div');
+document.body.appendChild(nelement);
+nelement.style.textAlign = 'center';
+
+function eleeemeent (name ,age ,imgsrc){
+    const card = document.createElement('div');
+    const img = document.createElement('img');
+    const p1 = document.createElement('h2');
+    const p2 = document.createElement('p');
+
+    img.src = imgsrc;
+    p1.textContent = name;
+    p2.textContent = age;
+
+    card.appendChild(p1);
+    card.appendChild(p2);
+    card.appendChild(img);
+
+    card.style.cssText = `
+        width: 200px;
+        background: #b64545ff;
+        padding: 10px;
+        margin: 2px;
+        display: inline-block;
+    `;
+
+    img.style.width = '100%';
+
+    container.appendChild(card);
+}
+eleeemeent('emad','22','img/143aa5b314b738ac89806627ee9d8e25.jpg');
+eleeemeent('ahmed','22','img/143aa5b314b738ac89806627ee9d8e25.jpg');
+eleeemeent('mohammed','22','img/143aa5b314b738ac89806627ee9d8e25.jpg');
+
+//----------------------------------------------------------------------------------\\
