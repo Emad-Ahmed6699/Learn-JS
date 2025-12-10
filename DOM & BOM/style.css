@@ -1,15 +1,15 @@
 /*navbar example*/
-.container{
+.containert{
     width: 130px;
     height: 100vh;
     background-color: #b64545ff;
     color: white;
 }
-.container p{
+.containert p{
     padding: 5px;
     margin: 0px;
 }
-.container p:hover ,#open:hover ,#close:hover{
+.containert p:hover ,#open:hover ,#close:hover{
     cursor: pointer;
     background-color: black;
 }
@@ -44,4 +44,21 @@
 .main img{
     width: 500px;
     height: 300px;
+}
+/*------------------------------------------------------------------*/
+
+.movebutton button{
+    border: none;
+    position: fixed ;
+    bottom: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #b64545ff;
+    color: white;
+    cursor: pointer;
+}
+.movebutton button:hover{
+    background-color: black;
 }
