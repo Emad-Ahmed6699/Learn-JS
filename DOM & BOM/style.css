@@ -1,0 +1,47 @@
+/*navbar example*/
+.container{
+    width: 130px;
+    height: 100vh;
+    background-color: #b64545ff;
+    color: white;
+}
+.container p{
+    padding: 5px;
+    margin: 0px;
+}
+.container p:hover ,#open:hover ,#close:hover{
+    cursor: pointer;
+    background-color: black;
+}
+#open{
+    background-color: #b64545ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+#close{
+    background-color: #b64545ff;
+    color: white;
+    border: none;
+    position: absolute;
+    left: 135px;
+    border-radius: 5px;
+}
+.hide{
+    display: none;
+}
+
+/*pictures example*/
+.photos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.photos img{
+    width: 200px;
+    height: 200px;
+}
+.main img{
+    width: 500px;
+    height: 300px;
+}

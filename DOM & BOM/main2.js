@@ -144,3 +144,56 @@ par.oncontextmenu = function print20(){
 par.onclick = function print21(){ //toggle : if the class is not exist it will add it (click to add and click to remove)
     par.classList.toggle('classeses');
 }
+
+// navbar example
+let container2 = document.querySelector('.container');
+let openbtn = document.getElementById('open');
+let closebtn = document.getElementById('close');
+openbtn.onclick = function print22(){
+    container2.style.display = 'block';
+    openbtn.classList.add('hide');
+    closebtn.classList.remove('hide');
+}
+closebtn.onclick = function print23(){
+    container2.classList.add('hide');
+    closebtn.classList.add('hide');
+    openbtn.classList.remove('hide');
+}
+//focus example 
+let focus = document.getElementById('focus');
+let txt =document.getElementById('clicks');
+focus.focus();
+//or 
+focus.onload = function print24(){
+    focus.focus();
+    focus.placeholder = 'anything'; //change the placeholder
+    focus.value = 'anything'; //change the value
+    txt.click();//click on the element
+}
+focus.oncontextmenu = function print25(){
+    focus.blur();   //remove the focus
+}
+
+//picture example
+let pic = document.getElementById('img1');
+let pic2 = document.getElementById('img2');
+let pic3 = document.getElementById('img3');
+pic.onclick = function print26(){
+    pic3.src =pic.src;
+    
+}
+pic2.onclick = function print27(){
+    pic3.src =pic2.src;
+}
+
+//--------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------
+//---------------------------------------BOM--------------------------------------------
+//--------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------
+//-------------------------------Browser Object Model-----------------------------------
+//--------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------
+
