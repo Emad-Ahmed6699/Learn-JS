@@ -287,3 +287,51 @@ function print36() {
 //settimeout is used to execute a function once after a specified time
 //setinterval is used to execute a function repeatedly at a specified interval
 
+//---------------------------------------------------------------------------
+//session storage 
+//session storage is used to store data in the browser (-- just in the current tab--)
+//session storage is not secure
+//session storage is not persistent
+//session storage is not shared between different websites
+
+//so we have to use local storage
+//local storage is used to store data in the browser(-- just in all tabs--)
+//local storage is secure
+//local storage is persistent
+//local storage is shared between different websites
+//local storage is cleared when the browser is closed
+//local storage is cleared when the user logs out
+
+localStorage.setItem('name', 'Emad');//we store the value using the key and value.
+localStorage.name = 'Emad Ahmed'; //set the value of the name key to 'Emad Ahmed'
+
+localStorage.getItem('name'); //get the value of the name key
+localStorage.name; //get the value of the name key (we can use this method instead of getItem)
+
+localStorage.setItem('age', 23); // the key and the value must be strings even if the value is a number
+localStorage.user = { name: 'Emad', age: 23 }; //we can store objects in local storage
+//the object will be converted to a string and stored in local storage (this is called serialization in javascript)
+//to solve this problem we have to use JSON.stringify
+localStorage.setItem('user', JSON.stringify({ name: 'Emad', age: 23 }));// the type of the value must be string
+console.log(JSON.parse(localStorage.getItem('user')));//the type of the value must be object
+//.key(); returns an array of all the keys in local storage
+console.log(localStorage.key(0)); //returns the first key in local storage
+console.log(localStorage.key(1)); //returns the second key in local storage
+//.clear(); clears all the data in local storage
+//.removeItem('key'); removes the key from local storage
+localStorage.removeItem('name')
+//localStorage.clear(); //clears all the data in local storage
+
+
+
+//the application on localstorage
+let t = document.getElementById('txt');
+
+t.onkeyup =function print37() {
+    localStorage.setItem('name', t.value);
+}
+
+if(localStorage.length > 0) {
+    t.value = localStorage.getItem('name');
+}
+//when the user refresh the page we have to save the data in localstorage
