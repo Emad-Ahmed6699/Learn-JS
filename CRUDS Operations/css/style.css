@@ -1,7 +1,33 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: #000000;
+    background-color: #222;
     color: #ffffff;
     font-family: 'Roboto', sans-serif;
+}
+.cruds{
+    width: 80%;
+    margin: auto;
+}
+input{
+    transition: transform 0.5s ease-in-out, background 0.5s ease-in-out;
+}
+input:focus{
+    outline: none;
+    transform: scale(1.1);
+}
+#total{
+    font-weight: bold;
+}
+button:hover{
+    letter-spacing: 1px ;
+    transition: 0.5s; 
+}
+#search-input{
+    transition: none;
+    transform: none;
+}
+.searchbycategory{
+    display: flex;
+    justify-content: space-around;
 }
